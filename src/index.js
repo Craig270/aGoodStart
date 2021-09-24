@@ -9,7 +9,7 @@ class Square extends React.Component {
       value: null,
     };
   }
-
+  //need to work on lifting state
   render() {
     return (
       <button
