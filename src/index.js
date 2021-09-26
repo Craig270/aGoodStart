@@ -74,3 +74,19 @@ class Game extends React.Component {
 // ========================================
 
 ReactDOM.render(<Game />, document.getElementById("root"));
+
+function highAndLow(numbers) {
+  let noSpace = numbers.split(/\s+/).join("");
+  let newSpaceMan = [...noSpace];
+  let small = newSpaceMan[0];
+  let big = newSpaceMan[0];
+  for (let i = 0; i < newSpaceMan.length; i++) {
+    if (parseInt(newSpaceMan[i]) < small) {
+      small = parseInt(newSpaceMan[i]);
+    }
+    if (newSpaceMan[i] > big) {
+      big = newSpaceMan[i];
+    }
+  }
+  return `${big} ${small}`;
+}
